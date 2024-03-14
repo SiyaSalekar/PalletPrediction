@@ -19,7 +19,7 @@ for folder_name in os.listdir(main_folder):
     folder_path = os.path.join(main_folder, folder_name)
     if os.path.isdir(folder_path):
         # Get list of images in the folder
-        images = [f for f in os.listdir(folder_path) if f.endswith(('_100.jpg', '_100.jpeg', '_100.png'))]
+        images = [f for f in os.listdir(folder_path) if f.endswith(('_300.jpg'))]
         for image_name in images:
             image_path = os.path.join(folder_path, image_name)
             
@@ -28,7 +28,7 @@ for folder_name in os.listdir(main_folder):
             
             # Draw a box around some predefined coordinates
             # Example coordinates (replace with your own)
-            x, y, w, h = 64, 288, 512, 192
+            x, y, w, h = 96, 400, 384, 80
             cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
             
             # Append the image to the appropriate list
